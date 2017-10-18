@@ -37,6 +37,7 @@ define("TPL_PATH", APP_PATH . "/template");
 
 
 include_once LIBS_PATH."/route.class.php";
+include_once LIBS_PATH."/smarty.class.php";
 
 $routeobj=new route();
 $routeobj->set();
