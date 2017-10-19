@@ -29,7 +29,7 @@ class db {
         $this->table=$tablename;
     }
 
-
+    /*查询多条数据*/
     function select(){
        $sql="select ".$this->opt["field"]." from ".$this->table." ".$this->opt["where"]." ".$this->opt["order"]." ".$this->opt["limit"];
        $result=$this->db->query($sql);
@@ -39,6 +39,24 @@ class db {
        }
 
        return $arr;
+
+    }
+
+    /*查询单条数据*/
+
+    function find(){
+        $sql="select ".$this->opt["field"]." from ".$this->table." ".$this->opt["where"]." ".$this->opt["order"]." ".$this->opt["limit"];
+        $result=$this->db->query($sql);
+        $row=$result->fetch_assoc();
+        return $row;
+    }
+
+    /*执行自定义的sql*/
+
+    function exec($sql){
+        $result=$this->db->query($sql);
+
+        return $result;
 
     }
 
@@ -57,6 +75,41 @@ class db {
     function limit($limit){
         $this->opt["limit"]="LIMIT ".$limit;
         return $this;
+    }
+
+    /*插入*/
+
+
+
+    function insert ($arr){
+        $attr="";
+        $val="";
+        foreach ($arr as $k=>$v){
+            $attr.=$k.",";
+            $val.=$v.",";
+        }
+        $attr=substr($attr,0,-1);
+        $val=substr($val,0,-1);
+
+        $sql="insert into ".$this->table." (".$attr.") values (".$val.")";
+
+        $this->db->query($sql);
+        return $this->db->affected_rows;
+
+    }
+
+    function update($sql){
+       $sql="update ".$this->table." set ".$sql." ".$this->opt["where"];
+       $this->db->query($sql);
+        return $this->db->affected_rows;
+    }
+
+    function delete(){
+        $sql="delete from ".$this->table." ".$this->opt["where"];
+
+        $this->db->query($sql);
+
+        return $this->db->affected_rows;
     }
 
 }
