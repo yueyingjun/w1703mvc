@@ -14,6 +14,9 @@ define("MOUDLES_PATH", APP_PATH . "/modules");
 // 模板的路径
 define("TPL_PATH", APP_PATH . "/template");
 
+//smarty的路径
+define("SMARTY_PATH",LIBS_PATH."/smarty");
+
 //2.  服务器的路径
 
   //协议
@@ -35,12 +38,16 @@ define("TPL_PATH", APP_PATH . "/template");
  define("JS_URL",STATIC_URL."/js");
  define("IMG_URL",STATIC_URL."/img");
 
-
 include_once LIBS_PATH."/route.class.php";
-include_once LIBS_PATH."/smarty.class.php";
+include_once SMARTY_PATH."/Smarty.class.php";
+$configs=include_once APP_PATH."/config.php";
+include_once LIBS_PATH."/db.class.php";
+
 
 $routeobj=new route();
 $routeobj->set();
+
+
 
 ?>
 

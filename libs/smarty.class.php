@@ -1,9 +1,13 @@
 <?php
 defined("COME") or exit("非法");
+
+//要 程序的运行效率 and 工作效率
 class smarty{
   public $templateUrl;
   public $compileUrl;
   public $arr=array();
+  public $cache=false;
+  public $cacheUrl;
 
   public function setTemplateUrl($dirname="template"){
         $this->templateUrl=$dirname;
@@ -23,20 +27,40 @@ class smarty{
         }
     }
 
+    public function setCacheUrl($dirname="cache"){
+        $this->cacheUrl=$dirname;
+        $cacheurl=APP_PATH."/".$this->cacheUrl;
+        $this->cacheUrl=$cacheurl;
+        if(!is_dir($cacheurl)){
+            mkdir($cacheurl);
+        }
+    }
+
     public function assign($str,$val){
       $this->arr[$str]=$val;
     }
-
     public function display($url){
+
+        $md5name=md5($url);
         $fullpath=$this->templateUrl."/".$url;
-        $str=file_get_contents($fullpath);
+        $cachefullpath=$this->cacheUrl."/".$md5name.".html";
+        if(is_file($cachefullpath)&&$this->cache){
+            include $cachefullpath;
+        }else {
+            $str = file_get_contents($fullpath);
 
-        $newstr=preg_replace("/\{([^\}\s]+)\}/",'<?php echo $this->arr["$1"]?>',$str);
+            $newstr = preg_replace("/\{([^\}\s]+)\}/", '<?php echo $this->arr["$1"]?>', $str);
 
-        $comfullpath=$this->compileUrl."/1.php";
-        file_put_contents($comfullpath,$newstr);
+            $comfullpath = $this->compileUrl . "/" . $md5name . ".php";
+            file_put_contents($comfullpath, $newstr);
 
-        include $comfullpath;
+            ob_start();
+            include $comfullpath;
+            $cachestr=ob_get_contents();
+            if($this->cache) {
+                file_put_contents($cachefullpath, $cachestr);
+            }
+        }
 
     }
 

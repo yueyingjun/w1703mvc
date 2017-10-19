@@ -10,6 +10,13 @@
     <script src="{JS_URL}/index.js"></script>
 </head>
 <body>
-  {title}
+
+{foreach $list as $v}
+    <ul>
+         <li>名字 {$v["name"]}</li>
+         <li>年龄 {$v["age"]}</li>
+    </ul>
+{/foreach}
+
 </body>
 </html>
