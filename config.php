@@ -5,6 +5,6 @@ return array(
         "port"=>"3306",
         "user"=>"root",
         "password"=>"123456",
-        "database"=>"w1703_mvc"
+        "database"=>"w1703_blog"
     )
 );

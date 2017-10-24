@@ -46,6 +46,7 @@ class db {
 
     function find(){
         $sql="select ".$this->opt["field"]." from ".$this->table." ".$this->opt["where"]." ".$this->opt["order"]." ".$this->opt["limit"];
+
         $result=$this->db->query($sql);
         $row=$result->fetch_assoc();
         return $row;

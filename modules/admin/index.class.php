@@ -1,6 +1,10 @@
 <?php
-class index{
+class index extends main{
     function init(){
-        echo "后台首页";
+        if(!isset($_SESSION["login"])){
+            echo "<script>location.href='index.php?m=admin&f=login'</script>";
+            exit;
+        }
+        $this->smarty->display("admin/index.html");
     }
 }
