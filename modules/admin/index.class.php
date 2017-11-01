@@ -5,6 +5,7 @@ class index extends main{
             echo "<script>location.href='index.php?m=admin&f=login'</script>";
             exit;
         }
+        $this->smarty->assign("aname",$_SESSION["aname"]);
         $this->smarty->display("admin/index.html");
     }
 }

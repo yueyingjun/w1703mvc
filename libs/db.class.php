@@ -95,6 +95,7 @@ class db {
         $sql="insert into ".$this->table." (".$attr.") values (".$val.")";
 
         $this->db->query($sql);
+
         return $this->db->affected_rows;
 
     }

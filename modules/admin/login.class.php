@@ -12,7 +12,7 @@ class login extends main{
         //1.  验证码
         $imagecode=strtolower($_POST["imagecode"]);
         if($_SESSION["imagecode"]!==$imagecode){
-            echo "imagecode error!";
+            echo "<script>alert('验证码错误');location.href='index.php?m=admin&f=login'</script>";
             exit;
         }
 
@@ -30,8 +30,10 @@ class login extends main{
         $apass=md5(P("apass"));
 
         $dbobj=new db("admin");
-        if(count($dbobj->where("aname='{$aname}' and apass='{$apass}'")->find())>0){
+        if(count($result=$dbobj->where("aname='{$aname}' and apass='{$apass}'")->find())>0){
             $_SESSION["login"]="yes";
+            $_SESSION["aname"]=$aname;
+            $_SESSION["aid"]=$result["aid"];
             echo "<script>location.href='index.php?m=admin&f=index'</script>";
 
         }else{
@@ -70,9 +72,19 @@ class login extends main{
        $obj=new code();
        $obj->width=120;
        $obj->height=40;
+       $obj->zhongzi="ab";
+       $obj->codelen=2;
        $obj->codeUrl="./demo.ttf";
        $obj->lineNum=0;
+
        $obj->out();
+    }
+
+    function logout(){
+        unset($_SESSION["login"]);
+        unset($_SESSION["aname"]);
+        unset($_SESSION["apass"]);
+        echo "<script>alert('登出成功');location.href='index.php?m=admin&f=login'</script>";
     }
 }
 

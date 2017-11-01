@@ -47,11 +47,5 @@ $configs = include_once APP_PATH . "/config.php";
 include_once LIBS_PATH . "/db.class.php";
 $routeobj = new route();
 $routeobj->set();
-?>
-
-
-
-
-
 
 
