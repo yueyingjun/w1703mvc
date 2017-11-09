@@ -1,13 +1,12 @@
 <?php
-class index{
+class index extends main {
    function init(){
-       $title="我是标题";
-       $smartyobj=new Smarty();
-       $smartyobj->setTemplateDir("./template");
-       $smartyobj->setCompileDir("./compile");
-       $dbobj=new db("abc");
-       $smartyobj->assign("title","我是主页");
-       $smartyobj->display("index/index.html");
+       $this->smarty->assign("header",$this->header);
+       $this->smarty->assign("footer",$this->footer);
+       $index=md5("uekblog");
+       $this->smarty->assign("islogin",isset($_SESSION[$index])?$_SESSION[$index]:"no");
+       $this->smarty->assign("uname",$_SESSION["uname"]);
+       $this->smarty->display("index/index.html");
 
    }
 }

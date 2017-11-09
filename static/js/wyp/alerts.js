@@ -1,0 +1,79 @@
+$(function(){
+    $(".alertLeft>ul>li").click(function(){
+        let cNum = $(this).index();
+        $(".alertLeft>ul>li").removeClass('changeClick');
+        $(this).addClass('changeClick');
+        $(".changeCate").css({"display":"none","z-index":"1"});
+        $(".changeCate").eq(cNum).css({"display":"block","z-index":"10"});
+    })
+    $('#form1').validate({
+        rules:{
+            uname:{
+                required:true,
+                minlength:2,
+            },
+            uphone:{
+                required:true,
+                minlength:10
+            },
+        },
+        messages:{
+            uname:{
+                required:"姓名必须输入",
+                minlength:"最少输入两个字符",
+            },
+            uphone:{
+                required:'电话必须输入',
+                minlength:'最少输入十个字符'
+            }
+        }
+    })
+    $('#form3').validate({
+        rules:{
+            oldpass:{
+                required:true,
+                minlength:6,
+                remote:{
+                    url: "index.php?m=index&f=alerts&a=pass",     //后台处理程序
+                    type: "post"
+                }
+            },
+            newpass:{
+                required:true,
+                minlength:6
+            },
+            newpass1:{
+                required:true,
+                minlength:6,
+                equalTo:"#pass"
+            }
+        },
+        messages:{
+            oldpass:{
+                required:'旧密码必须输入',
+                minlength:"最少输入六个字符",
+                remote:'密码错误'
+            },
+            newpass:{
+                required:'新密码必须输入',
+                minlength:'最少输入六个字符'
+            },
+            newpass1:{
+                required:'新密码必须再次输入',
+                minlength:'最少输入六个字符',
+                equalTo:'两次密码必须一致'
+            }
+        }
+    })
+    var obj=new upload();
+    obj.selectBtnStyle='width:70px;height:30px;border:1px solid pink;font-size:10px;color:pink;border-radius:5px;margin-left:150px';
+    obj.selectBtnCon='更换头像';
+    obj.pStyle='width:100px;height:100px;margin-left:0px;overflow:hidden;border-radius:50%;border:1px solid #ccc';
+    obj.upBtnStyle='width:70px;height:30px;border:1px solid pink;font-size:10px;color:pink;border-radius:5px;margin-left:150px';
+    obj.upBtnCon='上传头像';
+    obj.barStyle='width:0;height:100%;background:rgba(0,0,0,0);';
+    obj.createView({parent:document.querySelector('.parent')});
+    obj.up('index.php?m=admin&f=index&a=up',function(e){
+        $('.photo').val(e);
+    })
+})

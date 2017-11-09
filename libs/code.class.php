@@ -4,6 +4,7 @@ class code
     public $width = 160;
     public $height = 50;
     public $zhongzi = "123456789abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ";
+    public $regtype="";
     public $codelen = 4;
     public $codesize = array("min" => 20, "max" => 40);
     public $codeangle = array("min" => -15, "max" => 15);
@@ -96,10 +97,13 @@ class code
         $this->setCon();
         //3
 
+        //一个用户 1.  管理员   2. 用户
                 $this->setLine();
                 //4
                 $this->setPix();
-                $_SESSION["imagecode"]=strtolower($this->code);
+
+                $index=$this->regtype."imagecode";
+                $_SESSION[$index]=strtolower($this->code);
 
         $type = "image" . $this->type;
         $type($this->image);

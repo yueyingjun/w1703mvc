@@ -34,6 +34,7 @@ class login extends main{
             $_SESSION["login"]="yes";
             $_SESSION["aname"]=$aname;
             $_SESSION["aid"]=$result["aid"];
+            $_SESSION["level"]=$result["level"];
             echo "<script>location.href='index.php?m=admin&f=index'</script>";
 
         }else{

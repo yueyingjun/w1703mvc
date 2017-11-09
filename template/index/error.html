@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>提示信息</title>
+    <!-- 此文件为了显示Demo样式，项目中不需要引入 -->
+    <script src="{JS_URL}/jquery.min.js"></script>
+    <link href="http://g.alicdn.com/bui/bui/1.1.21/css/bs3/dpl.css" rel="stylesheet">
+    <link href="http://g.alicdn.com/bui/bui/1.1.21/css/bs3/bui.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+            <div class="span10" style="position: fixed;margin:auto;left:0;top:0;right:0;bottom:0;height:96px;">
+                <div class="tips tips-large tips-warning">
+                    <span class="x-icon x-icon-error">×</span>
+                    <div class="tips-content">
+                        <h2>{$errorInfo}</h2>
+                        <p class="auxiliary-text">
+                            请等待 <span class="num">3</span> 秒，自动跳转
+                        </p>
+                        <p>
+                            <a class="direct-lnk" title="返回首页" href="index.php">返回首页</a>
+                            <a class="direct-lnk uppage" title="上一页" href="{$uppage}" >返回上一页</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+    <!-- script end -->
+            <script>
+                var num=3;
+                setInterval(function(){
+                    num--;
+                    if(num<0){
+                        location.href=$(".uppage").attr("href");
+                    }else{
+                        $(".num").html(num);
+                    }
+                },1000)
+
+
+                setTimeout(function(){
+                    location.href=$(".uppage").attr("href");
+                },3000)
+            </script>
+</body>
+</html>

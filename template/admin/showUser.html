@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{CSS_URL}/bootstrap.min.css">
+    <style>
+        th{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            id
+        </th>
+        <th>
+            用户名字
+        </th>
+        <th>
+            用户的角色
+        </th>
+        <th>
+            用户的昵称
+        </th>
+        <th>
+            用户的头像
+        </th>
+        <th>
+            联系方式
+        </th>
+        <th>
+            操作
+        </th>
+    </tr>
+    {foreach $data as $v}
+    <tr>
+        <td>
+            {$v["uid"]}
+        </td>
+        <td>
+            {$v["uname"]}
+        </td>
+        <td>
+            {$v["rname"]}
+        </td>
+        <td>
+           {$v["nicheng"]}
+
+        </td>
+
+        <td>
+            <img src="{$v['photo']}" alt="">
+        </td>
+        <td>
+           {$v["phone"]}
+        </td>
+
+        <td>
+            删除  修改
+        </td>
+
+    </tr>
+    {/foreach}
+</table>
+</body>
+</html>

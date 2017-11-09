@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Editable TreeGrid - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="{CSS_URL}/easyui.css">
+    <link rel="stylesheet" type="text/css" href="{CSS_URL}/icon.css">
+    <script type="text/javascript" src="{JS_URL}/jquery.min.js"></script>
+    <script type="text/javascript" src="{JS_URL}/jquery.easyui.min.js"></script>
+</head>
+<body>
+
+<div style="margin:20px 0;">
+    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="edit()">Edit</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="save()">Save</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="cancel()">Cancel</a>
+
+    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="del()">Delete</a>
+</div>
+<table id="tg" class="easyui-treegrid" title="Editable TreeGrid" style="width:700px;height:250px;margin-top:50px;"
+       data-options="
+				iconCls: 'icon-ok',
+				rownumbers: true,
+				animate: true,
+				collapsible: true,
+				fitColumns: true,
+				url: 'index.php?m=admin&f=cat&a=tableCatCon',
+				method: 'post',
+				idField: 'id',
+				treeField: 'cname',
+				showFooter: true
+			">
+    <thead>
+    <tr>
+        <th data-options="field:'cname',width:200,editor:'text'">分类名称</th>
+
+        <th data-options="field:'cinfo',width:500,align:'right',editor:'text'">分类简介</th>
+    </tr>
+    </thead>
+</table>
+<script src="{JS_URL}/tableCat.js"></script>
+
+</body>
+</html>

@@ -31,6 +31,7 @@ define("APP_URL", substr($_SERVER["SCRIPT_NAME"], 0, strrpos($_SERVER["SCRIPT_NA
 
 define("HTTP_URL", PROT . "://" . HOST . APP_URL);
 
+
 //静态目录的路径
 define("STATIC_URL", HTTP_URL . "/static");
 //css的路径
@@ -40,11 +41,12 @@ define("JS_URL", STATIC_URL . "/js");
 define("IMG_URL", STATIC_URL . "/img");
 
 include_once LIBS_PATH . "/route.class.php";
-include_once LIBS_PATH . "/functions.php";
+
 include_once LIBS_PATH . "/main.class.php";
 include_once SMARTY_PATH . "/Smarty.class.php";
 $configs = include_once APP_PATH . "/config.php";
 include_once LIBS_PATH . "/db.class.php";
+include_once LIBS_PATH . "/functions.php";
 $routeobj = new route();
 $routeobj->set();
 

@@ -1,0 +1,260 @@
+*{
+    padding:0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 宋体;
+    user-select: none;
+}
+body,html{
+    width:100%;
+    height:100%;
+}
+.head{
+    width:100%;
+    height:70px;
+    background: #f7f7f7;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 30;
+    box-shadow: -1px -1px 5px  2px rgba(0, 0, 0, 0.1);
+
+}
+.header{
+    width:100%;
+    height:75px;
+}
+main{
+    width: 1000px;
+    height:100%;
+    margin: 0 auto;
+}
+.head1{
+    width:200px;
+    height:70px;
+    float: left;
+    text-align: center;
+    line-height:70px;
+    color: #666;
+    font-family: "华文行楷";
+    font-size: 40px;
+    position: fixed;
+    top:0;
+    left: 50px;
+}
+.head2{
+    width:400px;
+    height:100%;
+    float: left;
+    margin-left: 100px;
+}
+.head3{
+    width:400px;
+    height: 100%;
+    float: right;
+}
+.head21{
+    width:50px;
+    height: 100%;
+    float: left;
+}
+.head21>li{
+    line-height: 70px;
+    font-size: 20px;
+    font-family: "华文行楷";
+}
+.head21>li>a{
+    color: #333;
+}
+.search{
+    width:40px;
+    height:40px;
+    border-radius: 20px;
+    background: #ddd;
+    float:left;
+    margin-top: 15px;
+    margin-left: 40px;
+    position: relative;
+}
+.search1{
+    width:39px;
+    height:39px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    right:0;
+    top:0;
+    z-index: 1;
+    font-family: iconfont;
+    font-size: 20px;
+    line-height: 40px;
+    color: #333;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.search2{
+    width:0px;
+    height:30px;
+    position: absolute;
+    left: 20px;
+    top:5px;
+    outline: none;
+    border: none;
+    background: rgba(0,0,0,0);
+}
+
+
+.head31{
+    width: 200px;
+    height: 100%;
+    float: right;
+}
+.head32{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-family: 'iconfont';
+    display: block;
+    color: #ff9dbb;
+    line-height: 44px;
+    text-align: center;
+    border: 1px solid #ff9dbb;
+    font-size: 24px;
+    transform: rotate(-10deg);
+    position: fixed;
+    top:12px;
+    right: 140px;
+}
+.head31>a{
+    width: 56px;
+    height: 30px;
+    border: 1px solid #ff9dbb;
+    display: block;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+    color: #ff9dbb;
+    float: left;
+    border-radius:10px;
+    font-family: "华文行楷";
+    margin-top: 19px;
+}
+.head31>a:hover{
+    background: #ff9dbb;
+    color: #fafafa;
+}
+.headL{
+    font-size: 24px;
+    line-height: 70px;
+    text-align: center;
+    color: #ff9dbb;
+    float: left;
+    margin: 0 10px;
+}
+.head33{
+    width:70px;
+    height:40px;
+    font-size: 20px;
+    color: #ff9dbb;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    font-family: '华文行楷';
+    position: fixed;
+    top: 20px;
+    right: 70px;
+    display: block;
+}
+
+
+.bottom{
+    width:100%;
+    height:150px;
+    background: #f1f1f1;
+    margin-top: 30px;
+}
+.bottomLeft{
+    width:150px;
+    height:100px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 25px;
+    font-family: 华文行楷;
+    line-height: 100px;
+    text-align: center;
+    color: #666;
+    font-size: 40px;
+}
+.bottom1{
+    width:680px;
+    height:100%;
+    float: right;
+    margin-right: 50px;
+    /*background: yellow;*/
+}
+.bottom2{
+    width:775px;
+    height:30px;
+    /*background: red;*/
+    margin-top: 20px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+.bottom2>a{
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+    float: left;
+}
+.bottom2>a:hover{
+    color: #333;
+}
+.bottom2>span{
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    color: #666;
+    margin:0 10px;
+}
+.bottom1>span{
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+    margin-left: 25px;
+    display: block;
+}
+.bottom1>a{
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+    margin-left: 25px;
+    float: left;
+}
+.bottom1>a:hover{
+    color: #333;
+}
+.bottom1>p{
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+    margin-left: 25px;
+    float: left;
+    font-family: iconfont;
+}
+.top{
+    width:50px;
+    height:50px;
+    background: #ff8f9d;
+    font-size: 30px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    transform: rotate(-90deg);
+    font-family: iconfont;
+    position: fixed;
+    bottom: 50px;
+    right:120px;
+    display: none;
+}

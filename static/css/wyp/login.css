@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background: url("../img/reg2.jpg") no-repeat center/cover;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+form{
+    width: 400px;
+    height: 470px;
+    border-radius: 20px;
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 10px #eee;
+    margin: 100px auto;
+    padding: 10px;
+}
+h5{
+    font-size: 36px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+.list-group-item{
+    height: 60px;
+    line-height: 40px;
+    font-size: 16px;
+    background: none;
+    border: 1px solid #aaa;
+}
+input{
+    border: none;
+    background: none;
+    color: #111;
+}
+input:focus{
+    outline: none;
+}
+.list-group-item>a{
+    color: #000;
+}
+::-webkit-input-placeholder {
+    color:#333;
+}
+.code{
+    display: block;
+    float: right;
+    width: 120px;
+    height: 100%;
+    border-radius: 10px;
+}
+.code>img{
+    width: 120px;
+    height: 100%;
+    border-radius: 10px;
+}
+button{
+    width: 100%;
+    height: 50px;
+    font-size: 22px;
+    text-align: center;
+    line-height:40px;
+    font-weight: 400;
+    color: white;
+    background-image: -webkit-linear-gradient(left,#AA6BA4, #866eb7);
+    outline: none;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -webkit-transition: all .2s;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+button:hover{
+    box-shadow: 0 15px 30px 0 rgba(255,255,255,.15) inset, 0 2px 7px 0 rgba(0,0,0,.2);
+}
+
+label{
+    color: red;
+    font-size: 16px;
+    font-weight: 400;
+}
+span{
+    font-size: 16px;
+    float: right;
+    line-height: 26px;
+    margin-right: 5px;
+}
+.top{
+    font-size: 40px;
+    color: #333;
+    position: absolute;
+    top:50px;
+    left: 100px;
+    font-family: 华文行楷;
+    display: block;
+}
+.top:hover{
+    color: #222;
+    text-decoration: none;
+}

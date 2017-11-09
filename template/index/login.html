@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{CSS_URL}/wyp/bootstrap.css">
+    <link rel="stylesheet" href="{CSS_URL}/wyp/login.css">
+    <script src="{JS_URL}/wyp/jquery-3.2.1.js"></script>
+    <script src="{JS_URL}/wyp/jquery.validate.js"></script>
+</head>
+<body>
+<form class="form-horizontal forms" action="index.php?m=index&f=login&a=check" method="post" id="form">
+    <h5>登录</h5>
+    <ul class="list-group">
+        <li class="list-group-item glyphicon glyphicon-user">
+            <input type="text" placeholder="请输入用户名" name="uname">
+        </li>
+        <li class="list-group-item glyphicon glyphicon-lock">
+            <input type="password" placeholder="请输入密码" name="upass">
+        </li>
+        <li class="list-group-item glyphicon glyphicon-picture">
+            <input type="text" placeholder="请输入图形验证码" name="imgCode">
+            <a href="javascript:;" class="code"><img src="index.php?m=index&f=login&a=imageCode" alt="" onclick="this.src='index.php?m=index&f=login&a=imageCode'"></a>
+        </li>
+    </ul>
+    <button type="submit">登录</button>
+    <span>若未注册，则点击这里<a href="index.php?m=index&f=reg">注册</a></span>
+</form>
+<a href="index.php" class="top">随·心</a>
+</body>
+<script>
+    $(function(){
+        $("#form").validate({
+            rules: {
+                uname: {
+                    required: true,
+                    minlength: 2,
+                },
+                upass: {
+                    required: true,
+                    minlength: 6,
+
+                },
+            },
+            messages: {
+                uname: {
+                    required: "用户名必须输入",
+                    minlength: "最少输入两个字符",
+                },
+                upass: {
+                    required: "密码必须输入",
+                    minlength: "最少输入六个数字"
+                },
+            }
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,137 @@
+.orderView{
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+.orderTitle{
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.orderLeft{
+    width: 320px;
+    float: left;
+    padding: 28px 0;
+    margin-left: 30px;
+}
+.userHead{
+    display: inline-block;
+    margin-right: 15px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.userHead>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.info{
+    display: inline-block;
+    vertical-align: middle;
+}
+.info>a{
+    display: block;
+}
+.userName{
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #000;
+}
+.balancae{
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #969696
+}
+.balancae>.iconfont{
+    color: #eaad2a;
+    margin-right: 2px;
+}
+.orderMiddle{
+    width: 550px;
+    float: left;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    border-left: 1px solid #e4e4e4;
+}
+.orderNum{
+    padding: 6px 46px;
+    margin-top: 10px;
+}
+.orderNum>.iconfont{
+    font-size: 22px;
+    margin-right: 6px;
+    font-weight: 700;
+}
+.orderNum>.icon-gouwuche{
+    color: #ea6f5a;
+}
+.orderNum>.icon-fenlei1{
+    color: #3c86f3;
+}
+.orderNum>.icon-yizhifu{
+    color: #42c02e;
+}
+.orderNum>span:first-of-type{
+    font-weight: 700;
+    color: #969696;
+    margin-right: 20px;
+}
+.orderNum>span:last-of-type{
+    font-size: 18px;
+    font-weight: 700;
+}
+.waitNum{
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #969696;
+    margin-bottom: 10px;
+}
+.orderRight{
+    width: 33.333333%;
+    float: left;
+}
+.orderCon{
+    width: 898px;
+    height: auto;
+    border-radius: 6px 6px 0 0;
+}
+table{
+    width:100%;
+}
+th{
+    background: #fafafa;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+}
+td{
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+}
+.submit{
+    width:100%;
+    height:140px;
+}
+input[type=submit]{
+    width:100px;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    float: right;
+    margin: 50px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: -webkit-linear-gradient(0, rgba(255, 88, 109,0.5), rgba(124, 184, 255,0.5));
+    border: none;
+    outline: none;
+}

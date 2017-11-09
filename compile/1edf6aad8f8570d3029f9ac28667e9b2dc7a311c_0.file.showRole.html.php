@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-01 12:36:51
+/* Smarty version 3.1.30, created on 2017-11-02 08:37:23
   from "/Users/gaoxin/Documents/www/1703/mvc/template/admin/showRole.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59f9b1d3d3df22_46877537',
+  'unifunc' => 'content_59facb3357bb42_45669320',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1edf6aad8f8570d3029f9ac28667e9b2dc7a311c' => 
     array (
       0 => '/Users/gaoxin/Documents/www/1703/mvc/template/admin/showRole.html',
-      1 => 1509536182,
+      1 => 1509608237,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59f9b1d3d3df22_46877537 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59facb3357bb42_45669320 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,6 +56,30 @@ function content_59f9b1d3d3df22_46877537 (Smarty_Internal_Template $_smarty_tpl)
 
                         <input type="hidden" name="lid">
                         <input name="lname" type="text" data-rules="{ required:true }" class="input-normal control-text">
+                    </div>
+                </div>
+
+
+                <div class="control-group span12">
+                    <label class="control-label">内容权限：</label>
+                    <div class="controls bui-form-field-select" data-select="{ multipleSelect:true,items : [{ text:'添加',value:'1' },{ text:'删除',value:'2' },{ text:'修改',value:'3' },{ text:'查询',value:'4' }] }">
+                        <input type="hidden" name="connum">
+                    </div>
+                </div>
+
+
+                <div class="control-group span12">
+                <label class="control-label">留言权限：</label>
+                <div class="controls bui-form-field-select" data-select="{ multipleSelect:true,items : [{ text:'添加',value:'1' },{ text:'删除',value:'2' },{ text:'修改',value:'3' },{ text:'查询',value:'4' }] }">
+                    <input type="hidden" name="messagenum">
+                </div>
+            </div>
+
+
+                <div class="control-group span12">
+                    <label class="control-label">管理员权限：</label>
+                    <div class="controls bui-form-field-select" data-select="{ multipleSelect:true,items : [{ text:'添加',value:'1' },{ text:'删除',value:'2' },{ text:'修改',value:'3' },{ text:'查询',value:'4' }] }">
+                        <input type="hidden" name="adminnum">
                     </div>
                 </div>
 

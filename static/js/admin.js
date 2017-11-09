@@ -12,7 +12,7 @@ BUI.use('common/main',function(){
 
                 },
                 {
-                    id:'main-menu',text:'添加管理员',href:'main/menu.html'
+                    id:'main-menu',text:'添加管理员',href:'index.php?m=admin&f=member&a=addMember'
                 }
             ]
         },{
@@ -32,7 +32,7 @@ BUI.use('common/main',function(){
             text:'用户管理',
             items:[
                 {
-                    id:'code',text:'查看用户',href:'form/code.html'
+                    id:'code',text:'查看用户',href:'index.php?m=admin&f=user&a=showUser'
                 },
                 {
                     id:'example',text:'添加用户',href:'form/example.html'
@@ -42,10 +42,10 @@ BUI.use('common/main',function(){
             text:'用户角色管理',
             items:[
                 {
-                    id:'success',text:'查看角色',href:'form/success.html'
+                    id:'success',text:'查看角色',href:'index.php?m=admin&f=user&a=showRole'
                 },
                 {
-                    id:'fail',text:'添加角色',href:'form/fail.html'
+                    id:'fail',text:'添加角色',href:'index.php?m=admin&f=user&a=addRole'
                 }
 
             ]
@@ -56,10 +56,10 @@ BUI.use('common/main',function(){
             text:'分类管理',
             items:[
                 {
-                    id:'code',text:'查看分类',href:'search/code.html'
+                    id:'code',text:'查看分类',href:'index.php?m=admin&f=cat&a=tableCat'
                 },
                 {
-                    id:'example',text:'添加分类',href:'search/example.html'
+                    id:'example',text:'添加分类',href:'index.php?m=admin&f=cat&a=addCat'
                 }
             ]
         },{

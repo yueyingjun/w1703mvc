@@ -30,8 +30,8 @@ class db {
     }
 
     /*查询多条数据*/
-    function select(){
-       $sql="select ".$this->opt["field"]." from ".$this->table." ".$this->opt["where"]." ".$this->opt["order"]." ".$this->opt["limit"];
+    function select($params=""){
+       $sql=$params?$params:"select ".$this->opt["field"]." from ".$this->table." ".$this->opt["where"]." ".$this->opt["order"]." ".$this->opt["limit"];
        $result=$this->db->query($sql);
        $arr=array();
        while ($row=$result->fetch_assoc()){

@@ -1,10 +1,13 @@
 BUI.use(['bui/grid','bui/data'],function(Grid,Data){
     var Grid = Grid,
         Store = Data.Store,
-        enumObj = {"1" : "选项一","2" : "选项二","3" : "选项三"},
+        enumObj = {"1" : "添加","2" : "删除","3" : "修改","4":"查询"},
         columns = [
             {title : 'id',dataIndex :'lid'}, //editor中的定义等用于 BUI.Form.Field.Text的定义
             {title : '角色名称', dataIndex :'lname'},
+            {title : '内容权限',dataIndex : 'connum',renderer : Grid.Format.multipleItemsRenderer(enumObj)},
+            {title : '留言权限',dataIndex : 'messagenum',renderer : Grid.Format.multipleItemsRenderer(enumObj)},
+            {title : '管理员权限',dataIndex : 'adminnum',renderer : Grid.Format.multipleItemsRenderer(enumObj)},
             {title : '操作',renderer : function(){
                 return '<span class="grid-command btn-edit">编辑</span>'
             }}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{CSS_URL}/bootstrap.min.css">
+    <style>
+        th{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+  <table class="table table-bordered">
+      <tr>
+          <th>
+              id
+          </th>
+          <th>
+              角色名字
+          </th>
+          <th>
+              发布文章数量
+          </th>
+          <th>
+              查看文章权限
+          </th>
+          <th>
+              操作
+          </th>
+      </tr>
+      {foreach $data as $v}
+      <tr>
+            <td>
+                {$v["rid"]}
+            </td>
+          <td>
+              {$v["rname"]}
+          </td>
+          <td>
+              {$v["connum"]}
+          </td>
+          <td>
+              {if $v["conlevel"]==1}
+                    普通文章
+              {elseif $v["conlevel"]==2}
+                    精华文章
+              {else}
+                     极品文章
+              {/if}
+
+          </td>
+
+          <td>
+              删除  修改
+          </td>
+
+      </tr>
+      {/foreach}
+  </table>
+</body>
+</html>
