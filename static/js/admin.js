@@ -83,7 +83,21 @@ BUI.use('common/main',function(){
                         id : 'tab',text : '添加留言',href : 'search/tab.html'
                     }
                 ]
-            }]
+            },
+            {
+                text : '推荐位管理',
+                items : [
+                    {
+                        id : 'tab',text : '查看推荐位',href : 'index.php?m=admin&f=pos&a=showPos'
+                    },
+                    {
+                        id : 'tab',text : '添加推荐位',href : 'index.php?m=admin&f=pos&a=addPos'
+                    }
+                ]
+            }
+
+
+            ]
     },{
         id:'detail',
         menu:[{

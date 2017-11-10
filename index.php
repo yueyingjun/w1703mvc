@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 //单入口文件
 define("COME", "yes");
 // 服务器的根目录

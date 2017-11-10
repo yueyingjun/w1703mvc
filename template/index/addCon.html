@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,21 +9,22 @@
     <title>Document</title>
 </head>
 <body>
-  <a href="index.php?m=index&f=write&a=addConCon&cid={$cid}">+</a>
+  <a href="index.php?m=index&f=write&a=addConCon&cid={$cid}">添加内容</a>
   <ul>
-      <li>
-          第一篇内容
-      </li>
-      <li>
-          第一篇内容
-      </li>
-      <li>
-          第一篇内容
-      </li>
-      <li>
-          第一篇内容
-      </li>
-
+      {if count($data)>0}
+      {foreach $data as $v}
+            <li>
+                <a href="index.php?m=index&f=write&a=edit&cid={$v['cid']}">{$v["ctitle"]}
+                </a>
+              {$v["condate"]}
+              {$v["uid"]}
+            </li>
+      {/foreach}
+      {else}
+       <li>
+           没有内容
+       </li>
+      {/if}
   </ul>
 </body>
 </html>

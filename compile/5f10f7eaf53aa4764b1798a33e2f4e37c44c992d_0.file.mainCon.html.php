@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-09 11:08:17
+/* Smarty version 3.1.30, created on 2017-11-09 11:10:03
   from "/Users/gaoxin/Documents/www/1703/mvc/template/index/mainCon.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a0429112d21c4_24008422',
+  'unifunc' => 'content_5a04297ba502f1_55586679',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5f10f7eaf53aa4764b1798a33e2f4e37c44c992d' => 
     array (
       0 => '/Users/gaoxin/Documents/www/1703/mvc/template/index/mainCon.html',
-      1 => 1510222095,
+      1 => 1510222129,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a0429112d21c4_24008422 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a04297ba502f1_55586679 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!doctype html>
 <html lang="en">
@@ -36,7 +36,7 @@ function content_5a0429112d21c4_24008422 (Smarty_Internal_Template $_smarty_tpl)
             position: fixed;
             left:0;top:0;right:0;bottom: 0;
             margin:auto;
-            
+
         }
     </style>
 </head>
