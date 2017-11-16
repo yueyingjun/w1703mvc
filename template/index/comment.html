@@ -1,0 +1,75 @@
+<div class="commentbox">
+
+    {foreach $messages as $v}
+
+    <div class="clist">
+         <!--作者信息-->
+         <div class="authorbox">
+                <div class="authorPhoto">
+
+                </div>
+                <div class="authorinfo">
+                    <div class="authorname">
+                            {$v["uname"]}
+                    </div>
+                    <div class="time">
+                        10楼
+                    </div>
+                </div>
+         </div>
+
+         <div class="messagebox">
+             <div class="message">
+                 {$v["mcon"]}
+             </div>
+             <div class="replaybtn">
+                    <button type="button" class="rbtn" uid2="{$v['uid1']}" idnum="{$v['mid']}">回复</button>
+             </div>
+
+             <div class="replaybox">
+
+                 {foreach $v["son"] as $v1}
+                     <div class="replaylist">
+                         <div class="replayauthor">
+                            {$v1['uname']}
+                         </div>
+                         <div class="replaycon">
+                           {$v1['mcon']}
+                         </div>
+                         <div class="replaystste">
+                             <div class="replaytime">xxx:xx</div>
+                             <div class="replaybtn">
+
+                                 <button type="button" class="rbtn" author="{$v1['uname']}" uid2="{$v1['uid1']}" idnum="{$v['mid']}">回复</button>
+                             </div>
+                         </div>
+
+                     </div>
+
+                 {/foreach}
+
+                 <div class="addmessage" style="display: none">
+                     <button type="button" class="rbtn" uid2="{$v['uid1']}" idnum="{$v['mid']}">添加新评论</button>
+                 </div>
+                 <div class="replayform" style="margin-top: 5px;">
+                     <textarea style="width: 100%;height:50px;padding:0;margin:0"></textarea>
+                     <button type="button" class="replayBtn">提交</button>
+                     <button type="button" class="cancel1">取消</button>
+                 </div>
+
+             </div>
+         </div>
+
+
+      </div>
+
+    {/foreach}
+
+
+
+    <a href="javascript:;" class="up page" url="index.php?m=index&f=show&a=pages&pages={$pages-1}&cid={$cid}">上一页</a>
+    <a href="javascript:;" class="next page" url="index.php?m=index&f=show&a=pages&pages={$pages+1}&cid={$cid}">下一页</a>
+
+
+
+</div>

@@ -56,6 +56,7 @@ class pages{
 
         $nums=$pages*$this->nums;
         $this->limit=$nums.", ".$this->nums;
+
         return $str;
     }
 

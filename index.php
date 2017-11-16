@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 //单入口文件
 define("COME", "yes");
@@ -29,6 +30,9 @@ define("APP_URL", substr($_SERVER["SCRIPT_NAME"], 0, strrpos($_SERVER["SCRIPT_NA
 //服务器的项目路径
 
 define("HTTP_URL", PROT . "://" . HOST . APP_URL);
+
+//当前url
+define("SELF_URL",PROT . "://" . HOST .$_SERVER["REQUEST_URI"]);
 
 
 //静态目录的路径

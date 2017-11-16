@@ -66,7 +66,7 @@ BUI.use('common/main',function(){
             text : '内容管理',
             items : [
                 {
-                    id : 'tab',text : '查看内容',href : 'search/tab.html'
+                    id : 'tab',text : '查看内容',href : 'index.php?m=admin&f=con&a=showCon'
                 },
                 {
                     id : 'tab1',text : '添加内容',href : 'search/tab.html'

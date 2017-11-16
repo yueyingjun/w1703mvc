@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-08 02:35:17
+/* Smarty version 3.1.30, created on 2017-11-13 11:28:23
   from "/Users/gaoxin/Documents/www/1703/mvc/template/index/login.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a025f555678b4_69694060',
+  'unifunc' => 'content_5a0973c7a449a1_63090143',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a025f555678b4_69694060 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a0973c7a449a1_63090143 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!doctype html>
 <html lang="en">

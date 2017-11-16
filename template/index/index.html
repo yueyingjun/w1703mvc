@@ -13,16 +13,13 @@
     <section class="aside">
         <h3 class="icon-xiaoxizhongxinsuifang"> <span>随心Get</span></h3>
         <a href="index.php?m=index&f=type">♥ 新上榜<span>&#xe606;</span></a>
-        <a href="index.php?m=index&f=type">♥ 7日热门<span>&#xe606;</span></a>
+        <a href="index.php?m=index&f=get&a=hot">♥ 7日热门<span>&#xe606;</span></a>
         <a href="index.php?m=index&f=type">♥ 30日推荐<span>&#xe606;</span></a>
         <h3 class="icon-fenlei1"> <span>分类Type</span></h3>
-        <a href="index.php?m=index&f=lists">♥ 谈情说爱</a>
-        <a href="index.php?m=index&f=lists">♥ 城市故事</a>
-        <a href="index.php?m=index&f=lists">♥ 唯美散文</a>
-        <a href="index.php?m=index&f=lists">♥ 世间时事</a>
-        <a href="index.php?m=index&f=lists">♥ 书中漫步</a>
-        <a href="index.php?m=index&f=lists">♥ 生活小乐</a>
-        <a href="index.php?m=index&f=category">♥ 其他...</a>
+
+        {foreach $positions as $v}
+        <a href="index.php?m=index&f=lists&a=show&pid={$v['pid']}">{$v["pname"]}</a>
+        {/foreach}
         <h3 class="icon-icon-test"> <span>推荐Author</span></h3>
         <a href="index.php?m=index&f=author" class="test1">
             <img src="{IMG_URL}/3 (1).jpg" alt="">

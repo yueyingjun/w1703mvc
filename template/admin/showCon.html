@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{CSS_URL}/bootstrap.min.css">
+</head>
+<body>
+
+   <a href="index.php?m=admin&f=con&a=showCon&state=1">保存</a>
+   <a href="index.php?m=admin&f=con&a=showCon&state=2">审核</a>
+   <a href="index.php?m=admin&f=con&a=showCon&state=3">发布</a>
+
+   <a href="index.php?m=admin&f=con&a=showCon&attr=1">普通</a>
+   <a href="index.php?m=admin&f=con&a=showCon&attr=2">精华</a>
+   <a href="index.php?m=admin&f=con&a=showCon&attr=3">极品</a>
+   <table class="table table-bordered">
+       <tr>              con
+           <th>id</th>
+           <th>标题</th>
+           <th>作者</th>  user
+           <th>状态</th>
+           <th>属性</th>
+           <th>发布时间</th>
+           <th>缩略图</th>
+           <th>所属分类</th>
+           <th>推荐位</th>
+       </tr>
+       {foreach $data as $v}
+       <tr>
+            <td>
+                {$v["cid"]}
+            </td>
+           <td>
+               <a href="index.php?m=admin&f=con&a=showConCon&cid={$v['cid']}">{$v["ctitle"]}</a>
+           </td>
+           <td>
+               {$v["uname"]}
+           </td>
+           <td>
+               {if $v["state"]==1}
+                   保存
+               {elseif $v["state"]==2 }
+                   审核
+               {elseif $v["state"]==3 }
+                   发布
+               {else}
+                   禁用
+               {/if}
+           </td>
+           <td>
+
+               {if $v["cquanxian"]==1}
+                    普通
+               {elseif $v["cquanxian"]==2 }
+                    精华
+               {else}
+                    极品
+               {/if}
+
+           </td>
+           <td>
+               {$v["condate"]}
+           </td>
+           <td>
+               <img src="{$v['thumb']}" alt="" width="100">
+           </td>
+           <td>
+               {$v["cname"]}
+           </td>
+           <td>
+             {$v["pname"]}
+           </td>
+       </tr>
+       {/foreach}
+
+   </table>
+
+{$pages}
+</body>
+</html>

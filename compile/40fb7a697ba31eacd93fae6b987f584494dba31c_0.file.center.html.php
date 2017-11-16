@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-08 10:09:51
+/* Smarty version 3.1.30, created on 2017-11-13 11:39:17
   from "/Users/gaoxin/Documents/www/1703/mvc/template/index/center.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a02c9df2b9e77_69582475',
+  'unifunc' => 'content_5a0976552442d3_70187191',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '40fb7a697ba31eacd93fae6b987f584494dba31c' => 
     array (
       0 => '/Users/gaoxin/Documents/www/1703/mvc/template/index/center.html',
-      1 => 1510132189,
+      1 => 1510569554,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a02c9df2b9e77_69582475 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a0976552442d3_70187191 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender($_smarty_tpl->tpl_vars['header']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
 
@@ -50,7 +50,7 @@ $_smarty_tpl->_subTemplateRender($_smarty_tpl->tpl_vars['header']->value, $_smar
                         <li class="icon-_s"> <p>最新收录</p></li>
                         <li class="icon-remen3"> <p>热门</p></li>
                         <li class="icon-tuijian"> <p>关注</p></li>
-                        <li class="icon-slice19"> <p>收藏</p></li>
+                        <li class="icon-slice19"> <p>粉丝数量</p></li>
                     </ul>
                     <div class="line"></div>
                     <div class="line line1"></div>
@@ -459,10 +459,45 @@ $_smarty_tpl->_subTemplateRender($_smarty_tpl->tpl_vars['header']->value, $_smar
                         <a href="" class="more icon-liulan"> &nbsp;&nbsp;查看更多</a>
                     </div>
                     <div class="content1" style="display: none">
-                        <span>还没有关注哦</span>
+
+                        <ul>
+
+                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['data']->value, 'v');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+?>
+                            <li>
+                                <?php echo $_smarty_tpl->tpl_vars['v']->value["uname"];?>
+
+                            </li>
+                            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+
+                        </ul>
                     </div>
                     <div class="content1" style="display: none">
-                        <span>还没有收藏哦</span>
+                       <ul>
+                           <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['fance']->value, 'v');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+?>
+                           <li>
+                            <?php echo $_smarty_tpl->tpl_vars['v']->value["uname"];?>
+
+                           </li>
+                           <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+                       </ul>
                     </div>
                 </div>
             </div>

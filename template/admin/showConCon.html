@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="{JS_URL}/jquery.min.js"></script>
+</head>
+<body cid="{$data['cid']}">
+   <h1>
+            {$data["ctitle"]}
+   </h1>
+   <p>
+       {$data["con"]}<br>
+       {$data["condate"]}
+   </p>
+
+
+
+   普通：<input type="radio" value="1" name="cquanxian" {if $data["cquanxian"]==1} checked{/if} >
+   精华：<input type="radio" value="2" name="cquanxian" {if $data["cquanxian"]==2} checked{/if}>
+   极品：<input type="radio" value="3" name="cquanxian" {if $data["cquanxian"]==3} checked{/if}>
+   <br>
+
+   禁用：<input type="radio" value="4" name="state" {if $data["state"]==4} checked{/if}>
+   审核：<input type="radio" value="2" name="state" {if $data["state"]==2} checked{/if}>
+   发布：<input type="radio" value="3" name="state" {if $data["state"]==3} checked{/if}>
+
+
+   <script src="{JS_URL}/showConCon.js"></script>
+</body>
+</html>

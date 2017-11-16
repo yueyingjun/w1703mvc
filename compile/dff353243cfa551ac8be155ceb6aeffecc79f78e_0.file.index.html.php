@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-07 11:16:05
+/* Smarty version 3.1.30, created on 2017-11-13 11:49:21
   from "/Users/gaoxin/Documents/www/1703/mvc/template/index/index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a0187e58ca9a2_66973820',
+  'unifunc' => 'content_5a0978b10cf4a4_68104542',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dff353243cfa551ac8be155ceb6aeffecc79f78e' => 
     array (
       0 => '/Users/gaoxin/Documents/www/1703/mvc/template/index/index.html',
-      1 => 1510049761,
+      1 => 1510569762,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a0187e58ca9a2_66973820 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a0978b10cf4a4_68104542 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender($_smarty_tpl->tpl_vars['header']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
 
@@ -49,16 +49,24 @@ $_smarty_tpl->_subTemplateRender($_smarty_tpl->tpl_vars['header']->value, $_smar
     <section class="aside">
         <h3 class="icon-xiaoxizhongxinsuifang"> <span>随心Get</span></h3>
         <a href="index.php?m=index&f=type">♥ 新上榜<span>&#xe606;</span></a>
-        <a href="index.php?m=index&f=type">♥ 7日热门<span>&#xe606;</span></a>
+        <a href="index.php?m=index&f=get&a=hot">♥ 7日热门<span>&#xe606;</span></a>
         <a href="index.php?m=index&f=type">♥ 30日推荐<span>&#xe606;</span></a>
         <h3 class="icon-fenlei1"> <span>分类Type</span></h3>
-        <a href="index.php?m=index&f=lists">♥ 谈情说爱</a>
-        <a href="index.php?m=index&f=lists">♥ 城市故事</a>
-        <a href="index.php?m=index&f=lists">♥ 唯美散文</a>
-        <a href="index.php?m=index&f=lists">♥ 世间时事</a>
-        <a href="index.php?m=index&f=lists">♥ 书中漫步</a>
-        <a href="index.php?m=index&f=lists">♥ 生活小乐</a>
-        <a href="index.php?m=index&f=category">♥ 其他...</a>
+
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['positions']->value, 'v');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+?>
+        <a href="index.php?m=index&f=lists&a=show&pid=<?php echo $_smarty_tpl->tpl_vars['v']->value['pid'];?>
+"><?php echo $_smarty_tpl->tpl_vars['v']->value["pname"];?>
+</a>
+        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
         <h3 class="icon-icon-test"> <span>推荐Author</span></h3>
         <a href="index.php?m=index&f=author" class="test1">
             <img src="<?php echo IMG_URL;?>

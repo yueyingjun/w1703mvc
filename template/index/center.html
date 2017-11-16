@@ -21,7 +21,7 @@
                         <li class="icon-_s"> <p>最新收录</p></li>
                         <li class="icon-remen3"> <p>热门</p></li>
                         <li class="icon-tuijian"> <p>关注</p></li>
-                        <li class="icon-slice19"> <p>收藏</p></li>
+                        <li class="icon-slice19"> <p>粉丝数量</p></li>
                     </ul>
                     <div class="line"></div>
                     <div class="line line1"></div>
@@ -400,10 +400,25 @@
                         <a href="" class="more icon-liulan"> &nbsp;&nbsp;查看更多</a>
                     </div>
                     <div class="content1" style="display: none">
-                        <span>还没有关注哦</span>
+
+                        <ul>
+
+                            {foreach $data as $v}
+                            <li>
+                                {$v["uname"]}
+                            </li>
+                            {/foreach}
+
+                        </ul>
                     </div>
                     <div class="content1" style="display: none">
-                        <span>还没有收藏哦</span>
+                       <ul>
+                           {foreach $fance as $v}
+                           <li>
+                            {$v["uname"]}
+                           </li>
+                           {/foreach}
+                       </ul>
                     </div>
                 </div>
             </div>

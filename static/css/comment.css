@@ -1,0 +1,61 @@
+.comment{
+
+    height:200px;
+}
+.commentbox{
+     width:700px;
+    margin:auto;height:auto;
+
+}
+.clist{
+    padding-bottom: 10px; border-bottom:1px solid #aaa;margin-bottom: 40px;
+}
+.authorPhoto{
+    width:60px;height:60px;
+    border:1px solid #000;
+    border-radius: 50%;
+}
+.authorbox{
+   overflow: hidden;
+}
+.authorbox>div{
+
+    float:left;
+}
+
+.authorinfo>div{
+    margin-top:10px;
+    margin-left:5px;
+}
+.authorinfo>div:last-child{
+    color:#ccc;font-size: 14px;
+}
+.messagebox{
+    margin-top:5px;
+}
+.replaybox{
+    margin-left:30px;
+    border-left:2px solid #000;
+}
+.replaylist{
+
+
+    padding-bottom: 8px;
+}
+.replaystste{
+    overflow: hidden;
+}
+.replaystste>div{
+    float: left;
+    margin-right:5px;
+}
+.replayauthor{
+    color:orange;
+}
+.replaycon{
+    color:#999;
+}
+.replayform{
+    height:0;
+    overflow: hidden;
+}

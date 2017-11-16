@@ -7,5 +7,6 @@ class main{
         $this->smarty=$smartyobj;
         $this->header=TPL_PATH."/index/header.html";
         $this->footer=TPL_PATH."/index/footer.html";
+        $this->comment=TPL_PATH."/index/comment.html";
     }
 }

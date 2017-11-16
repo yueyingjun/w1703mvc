@@ -1,0 +1,125 @@
+{include file=$header}
+<link rel="stylesheet" href="{CSS_URL}/wyp/content.css">
+<script src="{JS_URL}/wyp/content.js"></script>
+<script src="{JS_URL}/comment.js"></script>
+<link rel="stylesheet" href="{CSS_URL}/comment.css">
+ <div class="notice">
+     操作成功
+ </div>
+<section class="word" cid="{$cid}" uid1="{$uid1}" uid2="{$data['uid']}" uname="{$uname}">
+    <main>
+        <div class="word1">
+            <h3 class="word2">{$data["ctitle"]}</h3>
+            <div class="word3">
+                <a href="index.php?m=index&f=author" class="word31"><img src="{IMG_URL}/1.jpg" alt=""></a>
+                <div class="word32">
+                    <div class="word33">
+                        <a href="index.php?m=index&f=author" class="word34">{$author}</a>
+
+
+                      {if !$uname }
+                        <a href="javascript:;" class="word35 guanzhu">+关注</a>
+                        <a href="javascript:;" class="word35 cancel" style="display: none">取消关注</a>
+                      {else}
+
+                          {if $flag}
+                        <a href="javascript:;" class="word35 cancel">取消关注</a>
+                        <a href="javascript:;" class="word35 guanzhu" style="display: none">+关注</a>
+                          {else}
+                        <a href="javascript:;" class="word35 guanzhu">+关注</a>
+                        <a href="javascript:;" class="word35 cancel" style="display: none">取消关注</a>
+                         {/if}
+
+                       {/if}
+                    </div>
+                    <div class="word36"><span>{$data["condate"]}</span> <span>字数 {strlen($data["con"])}</span> <span>阅读 {$hits}</span> <span>评论 307</span> <span>关注者 {$guanzhunum}</span> <span>赞赏 4</span></div>
+                </div>
+            </div>
+
+            <span class="word5">
+
+                {$data["con"]}
+            </span>
+            <div class="word6">
+                <div class="word61">
+                    <a href="index.php?m=index&f=type" class="icon-wenzhang1"> <span>谈情说爱</span></a>
+                    <span>© 著作权归作者所有</span>
+                </div>
+                <div class="word62">
+                    <div class="word63">
+                        <a href="index.php?m=index&f=author" class="word64"><img src="{IMG_URL}/xie.png" alt=""></a>
+                        <div class="word65">
+                            <a href="index.php?m=index&f=author">陌上花开</a>
+                            <span>写了 184237 字，被 39044 人关注，获得了 18909 个喜欢</span>
+                        </div>
+                        <a href="index.php?m=index&f=author" class="word66">+ 关注</a>
+                    </div>
+                    <div class="word67">微信公众号ID：陌上花开 💗💗喜欢我就关注我 两天一更，时间多一天一更</div>
+                </div>
+
+            </div>
+            <div class="word7">
+                <span>如果觉得我的文章对您有用，请随意赞赏。您的支持将鼓励我继续创作！</span>
+                <div class="word71">赞赏支持</div>
+            </div>
+            <div class="word8">
+                <div class="word81 icon-wodeshoucang"><p>喜欢</p> &nbsp;|&nbsp; <span>255</span></div>
+                <div class="word82">
+                    <div class="word83 icon-weixin"></div>
+                    <div class="word83 icon-0025"></div>
+                    <div class="word83 icon-qq3"></div>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="geren">
+                    <div class="gerenImg">
+                        <img src="{IMG_URL}/ui-sam.jpg" alt="">
+                    </div>
+                    <textarea name="" class="messageCon" cols="30" rows="10" placeholder="写下你的评论..."></textarea>
+                </div>
+                <div class="fabu" style="margin-bottom: 50px">
+                    <button type="submit" class="sendMessage">发送</button>
+                </div >
+
+            </div>
+
+        </div>
+        <div class="ajaxcon">
+        {include file=$comment}
+        </div>
+    </main>
+</section>
+{include file=$footer}
+<style>
+        .notice{
+            width:150px;height:50px;
+            background: rgba(0,0,0,.6);
+            position: fixed;
+            left:0;top:0;right:0;bottom: 0;
+            margin:auto;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+            color:#fff;
+            border-radius: 5px;
+
+            opacity: 0;
+
+
+
+        }
+    @keyframes notice {
+            0%{
+
+                opacity: 0;
+            }
+
+            50%{
+
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+    }
+</style>
